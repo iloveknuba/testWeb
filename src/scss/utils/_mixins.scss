@@ -1,0 +1,72 @@
+@import "variables";
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin up-to-mobile {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin blueText{
+  color: $blue-text;
+  font-size: rem-calc($blue-text-size);
+  padding-bottom: rem-calc(40);
+}
+
+@mixin listDecoration{
+  content: '';
+  position: absolute;
+  left: 0; /* Відступ зліва від батьківського елемента */
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%; /* Округла форма */
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  @content;
+}

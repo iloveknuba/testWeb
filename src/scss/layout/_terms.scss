@@ -1,0 +1,32 @@
+@import "../utils/base";
+
+.terms-section {
+  background-color: $white;
+  padding: 40px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  .heading{
+    font-weight: $semibold;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: $font-color;
+  }
+
+  .terms-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+}

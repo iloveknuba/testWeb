@@ -1,0 +1,37 @@
+@import "../utils/base";
+
+header {
+  background-color: $secondary-color;
+  padding: 20px 0;
+  .container{
+    @include flex-center-between;
+  }
+  .logo {
+    color: $white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin-left: 20px;
+
+        a {
+          color: $white;
+          font-size: 16px;
+          transition: background 0.3s;
+
+          &:hover {
+            background-color: darken($secondary-color, 10%);
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
